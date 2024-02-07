@@ -4,7 +4,6 @@ namespace Combustion_Calculator
 {
     internal static class Program
     {
-        // Unique name for the mutex (change this as per your application)
         private static string mutexName = "Combustion Calculator_SingleInstanceMutex";
 
         /// <summary>
@@ -29,7 +28,7 @@ namespace Combustion_Calculator
                 else
                 {
                     // Another instance is already running, so bring it to foreground
-                    IntPtr handle = FindWindow(null, "Combustion Calculator"); // Update the title of your form
+                    IntPtr handle = FindWindow(null, "Combustion Calculator"); 
                     if (handle != IntPtr.Zero)
                     {
                         ShowWindow(handle, SW_RESTORE);
